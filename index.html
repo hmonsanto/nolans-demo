@@ -124,15 +124,15 @@ h4 { font-size: 1.05rem; font-weight: 700; color: var(--carbon); font-family: va
 .menu a:not(.btn):hover { color: var(--lima); }
 .menu-cta { margin-top: 14px; }
 
-@media (max-width: 899px) {
+@media (max-width: 1039px) {
   .js .menu-boton { display: inline-flex; }
   .menu { padding: 0 var(--gutter) 20px; background: var(--verde-950); border-bottom: 1px solid rgba(255, 255, 255, 0.08); }
   .js .menu { display: none; position: absolute; top: 100%; left: 0; right: 0; max-height: calc(100vh - 68px); overflow-y: auto; }
   .js .menu.abierto { display: block; }
   .menu-cta { width: 100%; }
 }
-@media (min-width: 900px) {
-  .menu { display: flex; align-items: center; gap: 26px; }
+@media (min-width: 1040px) {
+  .menu { display: flex; align-items: center; gap: 22px; }
   .menu ul { flex-direction: row; gap: 4px; }
   .menu a:not(.btn) { padding: 10px 12px; border-bottom: 0; border-radius: 8px; font-size: 0.95rem; }
   .menu a:not(.btn):hover { background: rgba(255, 255, 255, 0.08); }
@@ -203,7 +203,8 @@ h4 { font-size: 1.05rem; font-weight: 700; color: var(--carbon); font-family: va
 
 /* Servicios */
 .grupos { display: grid; gap: 22px; }
-@media (min-width: 900px) { .grupos { grid-template-columns: 1fr 1fr; gap: 28px; align-items: start; } }
+@media (min-width: 760px) { .grupos { grid-template-columns: repeat(2, 1fr); gap: 24px; align-items: start; } }
+@media (min-width: 1100px) { .grupos { grid-template-columns: repeat(3, 1fr); } }
 .grupo { background: var(--crema); border: 1px solid var(--linea); border-radius: 22px; padding: clamp(22px, 4vw, 34px); }
 .grupo-resumen { color: var(--gris); margin-bottom: 20px; }
 .servicios { display: grid; gap: 4px; }
@@ -213,6 +214,24 @@ h4 { font-size: 1.05rem; font-weight: 700; color: var(--carbon); font-family: va
 .servicio-icono .ico { width: 24px; height: 24px; }
 .servicio p { margin: 0; color: var(--gris); font-size: 0.95rem; line-height: 1.4; }
 .servicios-nota { text-align: center; margin: 32px 0 0; font-size: 1.05rem; }
+
+/* Quiénes somos */
+.nosotros-grid { display: grid; gap: 36px; align-items: start; }
+@media (min-width: 900px) { .nosotros-grid { grid-template-columns: 1.1fr 0.9fr; gap: 64px; } }
+.nosotros-razon { font-size: 1.05rem; color: var(--verde-700); margin-bottom: 1.1em; }
+.nosotros-texto p { max-width: 60ch; }
+.clientes { display: flex; flex-wrap: wrap; gap: 8px; margin: 22px 0 26px; }
+.clientes li { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; border-radius: 999px; background: var(--verde-100); color: var(--verde-900); font-weight: 700; font-size: 0.95rem; }
+.clientes .ico { color: var(--verde-600); }
+.mision { margin: 0; padding: 18px 22px; border-left: 5px solid var(--ambar); border-radius: 0 14px 14px 0; background: var(--blanco); }
+.mision p { margin: 0; font-size: 1.08rem; line-height: 1.5; color: var(--verde-900); }
+.mision .mision-etiqueta { margin-bottom: 6px; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--verde-600); }
+.pilares { display: grid; gap: 14px; align-self: center; }
+.pilar { display: flex; gap: 16px; align-items: flex-start; padding: 22px; border-radius: 20px; background: var(--blanco); border: 1px solid var(--linea); }
+.pilar-icono { display: grid; place-items: center; width: 52px; height: 52px; flex: none; border-radius: 14px; background: var(--verde-700); color: var(--blanco); }
+.pilar-icono .ico { width: 26px; height: 26px; }
+.pilar h4 { font-size: 1.15rem; margin-bottom: 0.25em; }
+.pilar p { margin: 0; color: var(--gris); font-size: 0.97rem; }
 
 /* Equipo y galería */
 .equipos, .galeria { display: grid; gap: 14px; grid-template-columns: repeat(2, 1fr); }
@@ -394,6 +413,8 @@ dialog.legal .encabezado-pagina { padding-block: 40px 28px; }
     <symbol id="i-plomeria" viewBox="0 0 24 24"><path d="M15 4a5 5 0 0 0-4.6 6.9L4 17.3V20h2.7l6.4-6.4A5 5 0 0 0 20 9l-3 3-2.5-.5L14 9l3-3z"/></symbol>
     <symbol id="i-electricidad" viewBox="0 0 24 24"><path d="M13 2L5 14h6l-1 8 8-12h-6z"/></symbol>
     <symbol id="i-gabinete" viewBox="0 0 24 24"><path d="M4 4h16v16H4zM12 4v16M9.5 11.5v2M14.5 11.5v2"/></symbol>
+    <symbol id="i-maleza" viewBox="0 0 24 24"><path d="M6 20c0-8 4-13 12-14-1 8-5 13-12 14zM6 20l8-9M3 3l18 18"/></symbol>
+    <symbol id="i-plaga" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 1 4 4v3a4 4 0 0 1-8 0v-3a4 4 0 0 1 4-4zM9 8L7.5 5.5M15 8l1.5-2.5M8 12H4M16 12h4M8.5 16.5L5 18.5M15.5 16.5L19 18.5M12 12v6"/></symbol>
     <symbol id="i-excavadora" viewBox="0 0 24 24"><path d="M3 17h11v3H3zM5 17v-4h6v4M11 13l4-8M15 5l5 3-3 6h-3"/></symbol>
     <symbol id="i-camion" viewBox="0 0 24 24"><path d="M2 16V7h11v9M13 10h4l4 3v3h-3M2 16h2M8 16h7M6 18a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM17 18a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></symbol>
     <symbol id="i-estimado" viewBox="0 0 24 24"><path d="M9 4h6v3H9zM6 6h12v15H6zM9 12h6M9 16h4"/></symbol>
@@ -431,6 +452,7 @@ dialog.legal .encabezado-pagina { padding-block: 40px 28px; }
     <nav class="menu" id="menu-principal" aria-label="Principal">
       <ul>
         <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
         <li><a href="#equipo">Equipo</a></li>
         <li><a href="#equipo">Galería</a></li>
         <li><a href="#zona">Zona y horario</a></li>
@@ -531,7 +553,7 @@ dialog.legal .encabezado-pagina { padding-block: 40px 28px; }
                   <span class="servicio-icono"><svg class="ico" aria-hidden="true"><use href="#i-grama"/></svg></span>
                   <div>
                     <h4>Corte de grama</h4>
-                    <p>Mantenimiento regular o corte único.</p>
+                    <p>Corte profesional, regular o único.</p>
                   </div>
                 </li>
               
@@ -547,7 +569,7 @@ dialog.legal .encabezado-pagina { padding-block: 40px 28px; }
                   <span class="servicio-icono"><svg class="ico" aria-hidden="true"><use href="#i-arbol"/></svg></span>
                   <div>
                     <h4>Poda de árboles y arbustos</h4>
-                    <p>Poda segura y corte de árboles.</p>
+                    <p>Poda estética y corte de árboles.</p>
                   </div>
                 </li>
               
@@ -555,15 +577,31 @@ dialog.legal .encabezado-pagina { padding-block: 40px 28px; }
                   <span class="servicio-icono"><svg class="ico" aria-hidden="true"><use href="#i-diseno"/></svg></span>
                   <div>
                     <h4>Diseño de jardines</h4>
-                    <p>Ideas para que tu espacio luzca mejor.</p>
+                    <p>Diseño y mantenimiento de jardines.</p>
                   </div>
                 </li>
               
                 <li class="servicio reveal">
-                  <span class="servicio-icono"><svg class="ico" aria-hidden="true"><use href="#i-escombro"/></svg></span>
+                  <span class="servicio-icono"><svg class="ico" aria-hidden="true"><use href="#i-siembra"/></svg></span>
                   <div>
-                    <h4>Remoción de escombro</h4>
-                    <p>Recogemos y nos lo llevamos.</p>
+                    <h4>Mantillo, plantas y riego</h4>
+                    <p>Instalación de mantillo (mulch), plantas y sistemas de riego.</p>
+                  </div>
+                </li>
+              
+                <li class="servicio reveal">
+                  <span class="servicio-icono"><svg class="ico" aria-hidden="true"><use href="#i-maleza"/></svg></span>
+                  <div>
+                    <h4>Control de maleza</h4>
+                    <p>Eliminamos la maleza de tu propiedad.</p>
+                  </div>
+                </li>
+              
+                <li class="servicio reveal">
+                  <span class="servicio-icono"><svg class="ico" aria-hidden="true"><use href="#i-plaga"/></svg></span>
+                  <div>
+                    <h4>Control de plaga</h4>
+                    <p>Control de plagas en tu propiedad.</p>
                   </div>
                 </li>
               
@@ -574,6 +612,14 @@ dialog.legal .encabezado-pagina { padding-block: 40px 28px; }
             <h3 id="g-handyman">Handyman y mantenimiento</h3>
             <p class="grupo-resumen">Reparaciones y mejoras para tu casa o negocio.</p>
             <ul class="servicios">
+              
+                <li class="servicio reveal">
+                  <span class="servicio-icono"><svg class="ico" aria-hidden="true"><use href="#i-plomeria"/></svg></span>
+                  <div>
+                    <h4>Reparaciones generales</h4>
+                    <p>En el hogar y el comercio. Mantenimiento preventivo y correctivo.</p>
+                  </div>
+                </li>
               
                 <li class="servicio reveal">
                   <span class="servicio-icono"><svg class="ico" aria-hidden="true"><use href="#i-presion"/></svg></span>
@@ -634,9 +680,89 @@ dialog.legal .encabezado-pagina { padding-block: 40px 28px; }
             </ul>
           </article>
         
+          <article class="grupo" aria-labelledby="g-tierra">
+            <h3 id="g-tierra">Movimiento de tierra</h3>
+            <p class="grupo-resumen">Maquinaria especializada para preparar tu terreno.</p>
+            <ul class="servicios">
+              
+                <li class="servicio reveal">
+                  <span class="servicio-icono"><svg class="ico" aria-hidden="true"><use href="#i-excavadora"/></svg></span>
+                  <div>
+                    <h4>Excavación y nivelación</h4>
+                    <p>Excavación ligera y nivelación de terrenos.</p>
+                  </div>
+                </li>
+              
+                <li class="servicio reveal">
+                  <span class="servicio-icono"><svg class="ico" aria-hidden="true"><use href="#i-escombro"/></svg></span>
+                  <div>
+                    <h4>Escombros y preparación</h4>
+                    <p>Limpieza de escombros y preparación de áreas para construcción.</p>
+                  </div>
+                </li>
+              
+                <li class="servicio reveal">
+                  <span class="servicio-icono"><svg class="ico" aria-hidden="true"><use href="#i-camion"/></svg></span>
+                  <div>
+                    <h4>Transporte y carga</h4>
+                    <p>Camiones de carga para mover material.</p>
+                  </div>
+                </li>
+              
+            </ul>
+          </article>
+        
       </div>
 
       <p class="servicios-nota">¿No ves lo que buscas? <a href="#estimado">Cuéntanos qué necesitas</a>: hacemos más de lo que cabe en esta lista.</p>
+    </div>
+  </section>
+
+  <!-- ============ QUIÉNES SOMOS ============ -->
+  <section class="seccion seccion-crema" id="nosotros" aria-labelledby="nosotros-titulo">
+    <div class="contenedor nosotros-grid">
+      <div class="nosotros-texto">
+        <p class="etiqueta etiqueta-oscura">Quiénes somos</p>
+        <h2 id="nosotros-titulo">Transformando espacios, construyendo confianza.</h2>
+        <p class="nosotros-razon"><strong>Nolan&#39;s Landscaping &amp; Handyman Corp.</strong></p>
+        <p>Somos un equipo multidisciplinario dedicado al cuidado integral de propiedades residenciales y comerciales. Combinamos el arte del paisajismo con la precisión técnica del mantenimiento general (handyman).</p><p>Trabajamos con equipo propio —camiones de carga, excavadoras, unidades de servicio y equipo de corte— para atender desde un patio hasta un proyecto de movimiento de tierra.</p>
+        <ul class="clientes" aria-label="Tipo de clientes">
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg> Residencial</li><li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg> Comercial</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg> Fajardo, Ceiba y áreas cercanas</li>
+        </ul>
+        <blockquote class="mision">
+          <p class="mision-etiqueta">Nuestra misión</p>
+          <p>Superar las expectativas de nuestros clientes con un trabajo bien hecho, puntualidad y soluciones personalizadas para cada espacio.</p>
+        </blockquote>
+      </div>
+      <div class="pilares">
+        <h3 class="solo-lector">Por qué elegirnos</h3>
+        
+          <article class="pilar reveal">
+            <span class="pilar-icono"><svg class="ico" aria-hidden="true"><use href="#i-camion"/></svg></span>
+            <div>
+              <h4>Equipo completo</h4>
+              <p>Camiones de carga, excavadoras, unidades de servicio y equipo de corte para enfrentar cualquier reto.</p>
+            </div>
+          </article>
+        
+          <article class="pilar reveal">
+            <span class="pilar-icono"><svg class="ico" aria-hidden="true"><use href="#i-plomeria"/></svg></span>
+            <div>
+              <h4>Todo en uno</h4>
+              <p>Desde una reparación menor hasta una transformación total de tu patio, con un solo equipo.</p>
+            </div>
+          </article>
+        
+          <article class="pilar reveal">
+            <span class="pilar-icono"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg></span>
+            <div>
+              <h4>Compromiso local</h4>
+              <p>Somos una empresa local, con raíces en la comunidad de Fajardo y alrededores.</p>
+            </div>
+          </article>
+        
+      </div>
     </div>
   </section>
 
@@ -646,7 +772,7 @@ dialog.legal .encabezado-pagina { padding-block: 40px 28px; }
       <header class="seccion-cabecera">
         <p class="etiqueta">Equipo propio</p>
         <h2 id="equipo-titulo">Maquinaria para trabajos grandes</h2>
-        <p>Construcción, transporte y excavación con nuestra propia maquinaria: excavadora, minicargador, camión con grúa y camión de volteo.</p>
+        <p>Construcción, transporte y excavación con nuestra propia maquinaria: excavadora, minicargador, camión con grúa, camión de volteo y unidades de servicio.</p>
       </header>
       <ul class="equipos">
         
@@ -732,19 +858,9 @@ dialog.legal .encabezado-pagina { padding-block: 40px 28px; }
           <caption class="solo-lector">Horario de atención</caption>
           <tbody>
             
-              <tr data-dias="1,2,3" data-abre="07:00" data-cierra="18:00">
-                <th scope="row">Lunes a miércoles</th>
-                <td>7:00 AM – 6:00 PM</td>
-              </tr>
-            
-              <tr data-dias="4,5" data-abre="06:00" data-cierra="18:00">
-                <th scope="row">Jueves y viernes</th>
-                <td>6:00 AM – 6:00 PM</td>
-              </tr>
-            
-              <tr data-dias="6" data-abre="06:30" data-cierra="15:00">
-                <th scope="row">Sábado</th>
-                <td>6:30 AM – 3:00 PM</td>
+              <tr data-dias="1,2,3,4,5,6" data-abre="07:00" data-cierra="16:00">
+                <th scope="row">Lunes a sábado</th>
+                <td>7:00 AM – 4:00 PM</td>
               </tr>
             
               <tr data-dias="" >
@@ -774,6 +890,11 @@ dialog.legal .encabezado-pagina { padding-block: 40px 28px; }
           </details>
         
           <details>
+            <summary><span>¿Atienden casas y también negocios?</span><svg class="ico" aria-hidden="true"><use href="#i-mas"/></svg></summary>
+            <p>Sí. Trabajamos con propiedades residenciales y comerciales.</p>
+          </details>
+        
+          <details>
             <summary><span>¿Qué zonas cubren?</span><svg class="ico" aria-hidden="true"><use href="#i-mas"/></svg></summary>
             <p>Trabajamos en Fajardo, Ceiba y áreas cercanas. Si tu proyecto queda un poco más lejos, escríbenos y lo conversamos.</p>
           </details>
@@ -785,17 +906,17 @@ dialog.legal .encabezado-pagina { padding-block: 40px 28px; }
         
           <details>
             <summary><span>¿Cuál es el horario?</span><svg class="ico" aria-hidden="true"><use href="#i-mas"/></svg></summary>
-            <p>Lunes a miércoles de 7:00 AM a 6:00 PM, jueves y viernes de 6:00 AM a 6:00 PM, y sábados de 6:30 AM a 3:00 PM. Los domingos estamos cerrados.</p>
+            <p>De lunes a sábado, de 7:00 AM a 4:00 PM. Los domingos estamos cerrados.</p>
           </details>
         
           <details>
             <summary><span>¿Hacen trabajos grandes?</span><svg class="ico" aria-hidden="true"><use href="#i-mas"/></svg></summary>
-            <p>Sí. Contamos con equipo propio como excavadora, minicargador, camión con grúa y camión de volteo para excavación, movimiento de tierra y transporte.</p>
+            <p>Sí. Contamos con equipo propio como excavadora, minicargador, camión con grúa y camión de volteo para excavación, nivelación de terrenos, movimiento de tierra y transporte.</p>
           </details>
         
           <details>
             <summary><span>¿Hacen más que jardinería?</span><svg class="ico" aria-hidden="true"><use href="#i-mas"/></svg></summary>
-            <p>Sí. Además de corte de grama y poda, hacemos lavado a presión, techos, pintura, albañilería, plomería, electricidad y gabinetes de cocina, entre otros.</p>
+            <p>Sí. Además de corte de grama y poda, hacemos mantillo y riego, control de maleza y plaga, lavado a presión, techos, pintura, albañilería, plomería, electricidad y gabinetes de cocina, entre otros.</p>
           </details>
         
       </div>
@@ -833,7 +954,7 @@ dialog.legal .encabezado-pagina { padding-block: 40px 28px; }
           <label for="f-servicio">¿Qué servicio necesitas? <span class="opcional">(opcional)</span></label>
           <select id="f-servicio" name="servicio">
             <option value="">Elige uno…</option>
-            <option value="Corte de grama">Corte de grama</option><option value="Siembra de grama">Siembra de grama</option><option value="Poda o corte de árboles">Poda o corte de árboles</option><option value="Diseño de jardines">Diseño de jardines</option><option value="Remoción de escombro">Remoción de escombro</option><option value="Lavado a presión">Lavado a presión</option><option value="Techos">Techos</option><option value="Pintura">Pintura</option><option value="Albañilería">Albañilería</option><option value="Plomería">Plomería</option><option value="Electricidad">Electricidad</option><option value="Gabinetes de cocina">Gabinetes de cocina</option><option value="Excavación o movimiento de tierra">Excavación o movimiento de tierra</option><option value="Otro">Otro</option>
+            <option value="Corte de grama">Corte de grama</option><option value="Siembra de grama">Siembra de grama</option><option value="Poda o corte de árboles">Poda o corte de árboles</option><option value="Diseño de jardines">Diseño de jardines</option><option value="Mantillo, plantas o riego">Mantillo, plantas o riego</option><option value="Control de maleza o plaga">Control de maleza o plaga</option><option value="Remoción de escombro">Remoción de escombro</option><option value="Lavado a presión">Lavado a presión</option><option value="Techos">Techos</option><option value="Pintura">Pintura</option><option value="Albañilería">Albañilería</option><option value="Plomería">Plomería</option><option value="Electricidad">Electricidad</option><option value="Gabinetes de cocina">Gabinetes de cocina</option><option value="Reparaciones generales">Reparaciones generales</option><option value="Excavación o nivelación de terreno">Excavación o nivelación de terreno</option><option value="Otro">Otro</option>
           </select>
         </div>
 
@@ -873,7 +994,7 @@ dialog.legal .encabezado-pagina { padding-block: 40px 28px; }
         <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsPSJOb2xhbidzIExhbmRzY2FwaW5nICZhbXA7IEhhbmR5bWFuJ3MiPgogIDxyZWN0IHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgcng9IjE1IiBmaWxsPSIjMGIyZTFhIi8+CiAgPHBhdGggZmlsbD0iIzhlZTA0YSIgZD0iTTE1IDQ3VjE5aDkuNUw0MCAzNi41VjE5aDl2MjhoLTkuMkwyNCAyOS4yVjQ3eiIvPgogIDxwYXRoIGZpbGw9IiNmNWIzMDEiIGQ9Ik00NC41IDE5Yy0xLTcgMi0xMiA5LTE0IDEgNy0yIDEyLTkgMTR6Ii8+CiAgPHJlY3QgeD0iMTUiIHk9IjUyIiB3aWR0aD0iMzQiIGhlaWdodD0iMy41IiByeD0iMS43NSIgZmlsbD0iI2Y1YjMwMSIvPgo8L3N2Zz4K" width="48" height="48" alt="">
         <span class="marca-texto"><strong>Nolan's</strong><small>Landscaping &amp; Handyman's</small></span>
       </a>
-      <p>Nolan&#39;s Design&#39;s &amp; More</p>
+      <p>Transformando espacios, construyendo confianza.</p>
       <p>Jardinería, handyman y equipo pesado en Fajardo, Ceiba y áreas cercanas.</p>
     </div>
 
@@ -890,11 +1011,7 @@ dialog.legal .encabezado-pagina { padding-block: 40px 28px; }
       <h2 class="pie-titulo">Horario</h2>
       <ul class="pie-lista pie-horario">
         
-          <li><span>Lun–Mié</span> <span>7:00 AM – 6:00 PM</span></li>
-        
-          <li><span>Jue–Vie</span> <span>6:00 AM – 6:00 PM</span></li>
-        
-          <li><span>Sáb</span> <span>6:30 AM – 3:00 PM</span></li>
+          <li><span>Lun–Sáb</span> <span>7:00 AM – 4:00 PM</span></li>
         
           <li><span>Dom</span> <span>Cerrado</span></li>
         
@@ -912,7 +1029,7 @@ dialog.legal .encabezado-pagina { padding-block: 40px 28px; }
     </div>
   </div>
   <div class="contenedor pie-legal">
-    <p>© 2026 Nolan&#39;s Landscaping &amp; Handyman&#39;s. Todos los derechos reservados.</p>
+    <p>© 2026 Nolan&#39;s Landscaping &amp; Handyman Corp. · Nolan&#39;s Design&#39;s &amp; More. Todos los derechos reservados.</p>
   </div>
 </footer>
 
@@ -938,6 +1055,8 @@ dialog.legal .encabezado-pagina { padding-block: 40px 28px; }
   </section>
   <section class="seccion">
     <div class="contenedor contenedor-angosto prosa">
+      <p>Responsable de este sitio: <strong>Nolan&#39;s Landscaping &amp; Handyman Corp.</strong>.</p>
+
       <h2>Qué datos usamos</h2>
       <p>Cuando pides un estimado en este sitio nos das tu <strong>nombre</strong>, la <strong>dirección o sector</strong> del trabajo y tu <strong>teléfono</strong>, y opcionalmente el servicio que necesitas. Los usamos únicamente para contactarte y cotizar el trabajo.</p>
 
@@ -977,7 +1096,7 @@ dialog.legal .encabezado-pagina { padding-block: 40px 28px; }
   <section class="seccion">
     <div class="contenedor contenedor-angosto prosa">
       <h2>Sobre este sitio</h2>
-      <p>Este sitio presenta los servicios de Nolan&#39;s Landscaping &amp; Handyman&#39;s y permite pedir un estimado. La información es general y puede cambiar sin previo aviso.</p>
+      <p>Este sitio presenta los servicios de Nolan&#39;s Landscaping &amp; Handyman Corp. («Nolan&#39;s Landscaping &amp; Handyman&#39;s») y permite pedir un estimado. La información es general y puede cambiar sin previo aviso.</p>
 
       <h2>Estimados</h2>
       <ul>
