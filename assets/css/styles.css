@@ -486,6 +486,39 @@ body.pagina-entrada { background: #1c1008; }
 }
 @media (min-width: 800px) and (max-height: 700px) { .panel-lista { display: none; } }
 
+/* ---------- Mascotas (personajes del logo anterior) ----------
+ * Solo decorativas: sin interacción, sin JavaScript y con carga diferida (salvo en la entrada).
+ * Se apagan en todo el sitio con MASCOTAS=off. */
+.mascota { display: block; height: auto; max-width: none; pointer-events: none; user-select: none; -webkit-user-drag: none; filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.28)); }
+
+/* En la entrada: cada personaje se para en su mitad, junto a la diagonal. */
+.entrada { --ancho-masc: clamp(150px, min(21vw, 34vh), 300px); }
+.panel-contenido { position: relative; z-index: 1; }
+.mascota-panel { position: absolute; bottom: 0; right: 8px; z-index: 0; width: 112px; }
+.panel-designs .mascota-panel { width: 126px; }
+@media (min-width: 480px) { .mascota-panel { width: 150px; } .panel-designs .mascota-panel { width: 165px; } }
+@media (min-width: 800px) {
+  .panel-landscaping .mascota-panel { right: auto; left: calc(43% - var(--ancho-masc) - 1vw); width: var(--ancho-masc); }
+  .panel-designs .mascota-panel { right: auto; left: calc(48% + 1vw); width: calc(var(--ancho-masc) * 0.85); }
+}
+
+/* En el enlace a la otra línea del negocio: el personaje de esa línea, parado sobre el borde de abajo. */
+.puente { position: relative; overflow: hidden; }
+.puente-texto-bloque { flex: 1 1 280px; min-width: 0; }
+.mascota-puente { display: none; }
+@media (min-width: 720px) {
+  .mascota-puente { display: block; flex: none; align-self: flex-end; width: 150px; margin: -10px 0 -36px; }
+  .mascota-puente.mascota-carpintero { width: 175px; }
+}
+
+/* Sobre el formulario: el personaje se asoma por detrás de la tarjeta. */
+.formulario-envoltura { position: relative; }
+.formulario-envoltura .formulario { position: relative; z-index: 1; }
+.formulario-envoltura.con-mascota { margin-top: 120px; }
+.mascota-asoma { position: absolute; z-index: 0; right: 30px; bottom: calc(100% - 3px); }
+.mascota-asoma.mascota-carpintero { width: 185px; }
+.mascota-asoma.mascota-cortagrama { width: 150px; }
+
 /* ---------- Animación de revelado ---------- */
 @media (prefers-reduced-motion: no-preference) {
   .js .reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.6s ease, transform 0.6s ease; }
