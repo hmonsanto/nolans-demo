@@ -315,13 +315,14 @@ h4 { font-size: 1.05rem; font-weight: 700; color: var(--carbon); font-family: va
 .pie a:hover { color: var(--lima); text-decoration: underline; }
 .pie-grid { display: grid; gap: 32px; padding-bottom: 40px; }
 @media (min-width: 640px) { .pie-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 1000px) { .pie-grid { grid-template-columns: 1.4fr 1fr 1.1fr 1fr; gap: 40px; } }
+@media (min-width: 1000px) { .pie-grid { grid-template-columns: 1.15fr 1.45fr 1fr 0.9fr; gap: 32px; } }
 .pie-marca p { margin: 14px 0 0; max-width: 26em; font-size: 0.95rem; }
 .pie-titulo { font-size: 1.15rem; color: var(--blanco); margin-bottom: 14px; letter-spacing: 0.08em; }
 .pie-lista { display: grid; gap: 10px; font-size: 0.95rem; }
 .pie-lista li { display: flex; gap: 8px; align-items: center; }
 .pie-lista .ico { color: var(--lima); }
 .pie-horario li { justify-content: space-between; max-width: 260px; }
+.pie-correo, .correo, .entrada-contacto a { overflow-wrap: anywhere; }
 .pie-legal { border-top: 1px solid rgba(255, 255, 255, 0.1); padding-block: 22px; font-size: 0.85rem; }
 .pie-legal p { margin: 0; }
 .pie .enlace-boton { color: rgba(255, 255, 255, 0.85); }
